@@ -1,0 +1,44 @@
+ATURAN PENGKODEAN JENIS AKUN:
+
+1. Kode Akun untuk header/kategori harus hanya 1 huruf.
+contoh: B
+
+2. Kode Akun yang berkaitan dengan transaksi diawali dengan huruf kategorinya, lalu dilanjutkan dengan nomor urut.
+contoh: B7
+
+3. Kode Akun yang berkaitan dengan bawaan koperasi sebaiknya tidak dihapus ataupun dinonaktifkan, karena sudah otomatis terjumlah.
+default akun sbb.:
+ID 	= Keterangan
+----------------------------
+48 	= Pelunasan / Angsuran
+7 	= Pinjaman
+32 	= Simpanan Sukarela
+40 	= Simpanan Pokok
+41 	= Simpanan Wajib
+
+
+4. Data Akun Kas Terpisah
+
+5. Pengaturan Aktiva Pasiva untuk pengaturan Neraca Saldo
+Yang termasuk Aktiva:
+- Kas, Asset, Inventaris, Bayar Dimuka
+- Biaya (ini penting, data lama masih menggunakan Pasiva, mohon diubah)
+
+Yang termasuk Pasiva:
+- Hutang, Modal, Simpanan 
+
+6. Pengaturan Laba Rugi (PENDAPATAN dan BIAYA)
+Penentuan PENDAPATAN:
+- Pendapatan dari Pinjaman sudah otomatis
+- Apabila ada pendapatan manual lain, silahkan tambahkan atau ubah Akun yang sudah ada.
+contoh: jenis akun = Pendapatan Lainnya, Laba Rugi = PENDAPATAN
+Penentuan BIAYA:
+- Biaya semua dapat ditentukan dengan mengubah atau menambahkan akun.
+contoh: jenis akun = Biaya Listrik, Laba Rugi = BIAYA
+*) Penentuan Laba Rugi dilakukan pada menu Master Data -> Jenis Akun
+*) Pastikan Pemasukan dipilih "Y" jika ingin tampil di Transaksi Kas Pemasukan
+*) Pastikan Pengeluaran dipilih "Y" jika ingin tampil di Transaksi Kas Pengeluaran
+*) Pastikan Pemasukan dan Pengeluaran dipilih "Y" jika ingin dapat Masuk dan Keluar.
+
+
+

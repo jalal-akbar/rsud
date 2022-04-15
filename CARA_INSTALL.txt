@@ -1,0 +1,42 @@
+1. Nyalakan Webserver
+- untuk Linux, gunakan lampp atau install manual atau webserver sejenisnya.
+- untuk Windows, gunakan Xampp, uWamp (rekomendasi - www.uwamp.com), atau sejenisnya.
+2. copy folder nsi_koperasi ke htdocs atau www atau public_html
+- untuk linux lammp ada di /opt/lampp/htdocs/
+- khusus untuk linux, mac atau windows yg ada proteksi akses, pastikan folder nsi_koperasi/uploads/* adalah WRITEABLE agar dapat upload user pic. 
+3. buka phpmyadmin, lalu buat database baru dengan nama misal nsi_koperasi
+4. pilih db yg telah dibuat tadi, lalu import file dbkoperasi_ci.sql melalui phpmyadmin
+5. buka file koperasi_3.0/application/config/database.php
+lihat baris 51 kebawah
+ubah bagian ini:
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+$db['default']['database'] = 'koperasi_3.0';
+Ubah sesuai aturan webserver Anda.
+
+6. Untuk Ubah gambar Logo Koperasi, silahkan replace gambar file berikut:
+koperasi_3.0/assets/theme_admin/img/logo.png dan
+koperasi_3.0/assets/theme_admin/img/logo2.png
+(sesuaikan ukuran proporsional)
+
+Lalu silahkan buka di browser:
+http://localhost/koperasi_3.0/
+User Level Admin
+- username: admin
+- password: admin
+User level Operator
+- username: operator
+- password: operator
+User level Pinjaman
+- username: pinjaman
+- Pass: pinjaman
+
+Catatan:
+- nama folder di public_html atau www "koperasi_3.0" dapat Anda ubah sesuai keinginan.
+
+
+===================================
+
+
+Terimakasih
