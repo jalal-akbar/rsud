@@ -12,7 +12,7 @@ class Bayar extends OperatorController {
 		$this->data['judul_browser'] = 'Pinjaman';
 		$this->data['judul_utama'] = 'Transaksi';
 		// $this->data['judul_sub'] = 'Pembayaran Angsuran';
-		$this->data['judul_sub'] = 'Pembayaran Angsuran <a href="' . site_url('anggota/import') . '" class="btn btn-sm btn-success">Import Data</a>';
+		$this->data['judul_sub'] = 'Pembayaran Angsuran <a href="' . site_url('bayar/import') . '" class="btn btn-sm btn-success">Import Data</a>';
 
 		$this->data['css_files'][] = base_url() . 'assets/easyui/themes/default/easyui.css';
 		$this->data['css_files'][] = base_url() . 'assets/easyui/themes/icon.css';
@@ -101,5 +101,19 @@ class Bayar extends OperatorController {
 		//keys total & rows wajib bagi jEasyUI
 		$result = array('total'=>$data['count'],'rows'=>$rows);
 		echo json_encode($result); //return nya json
+	}
+
+	function import()
+	{
+		$this->data['judul_browser'] = 'Import Data';
+		$this->data['judul_utama'] = 'Import Data';
+		$this->data['judul_sub'] = 'Pembayaran Angsuran <a href="' . site_url('anggota') . '" class="btn btn-sm btn-success">Kembali</a>';
+
+		$this->load->helper(array('form'));
+
+
+
+		$this->data['isi'] = $this->load->view('anggota_import_v', $this->data, TRUE);
+		$this->load->view('themes/layout_utama_v', $this->data);
 	}
 }
