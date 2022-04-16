@@ -12,7 +12,7 @@ class Simpanan extends OperatorController {
 		$this->data['judul_browser'] = 'Transaksi';
 		$this->data['judul_utama'] = 'Transaksi';
 		// $this->data['judul_sub'] = 'Setoran Tunai';
-		$this->data['judul_sub'] = 'Setoran Tunai <a href="' . site_url('simpanan/import') . '" class="btn btn-sm btn-success">Import Data</a>';
+		$this->data['judul_sub'] = 'Setoran Tunai <a href="' . site_url('simpanan/import') . '" class="btn btn-sm btn-success">Import</a>';
 
 		$this->data['css_files'][] = base_url() . 'assets/easyui/themes/default/easyui.css';
 		$this->data['css_files'][] = base_url() . 'assets/easyui/themes/icon.css';
@@ -256,13 +256,13 @@ class Simpanan extends OperatorController {
 	{
 		$this->data['judul_browser'] = 'Import Data';
 		$this->data['judul_utama'] = 'Import Data';
-		$this->data['judul_sub'] = 'Setoran Tunai <a href="' . site_url('anggota') . '" class="btn btn-sm btn-success">Kembali</a>';
+		$this->data['judul_sub'] = 'Setoran Tunai <a href="' . site_url('simpanan') . '" class="btn btn-sm btn-success">Kembali</a>';
 
 		$this->load->helper(array('form'));
 
 
 
-		$this->data['isi'] = $this->load->view('anggota_import_v', $this->data, TRUE);
+		$this->data['isi'] = $this->load->view('simpanan_import_v', $this->data, TRUE);
 		$this->load->view('themes/layout_utama_v', $this->data);
 	}
 }
